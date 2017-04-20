@@ -4,7 +4,8 @@
   "description": "Coming soon!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-local": "istanbul cover _mocha"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,11 @@
     "nymag-fs": "^1.0.0",
     "util": "^0.10.3",
     "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "sinon": "^2.1.0"
   }
 }
