@@ -12,3 +12,6 @@ module.exports.save = require('./lib/save');
 module.exports.elastic = require('./lib/services/elastic');
 module.exports.helpers = require('./lib/services/elastic-helpers');
 module.exports.filters = require('./lib/services/filters');
+
+// Page List
+module.exports.updatePageProperty = require('./lib/page-list').updatePageEntry;
