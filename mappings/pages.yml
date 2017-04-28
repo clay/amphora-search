@@ -5,6 +5,9 @@ general:
       type: string
       index: analyzed
       analyzer: simple
+    titleTruncated:
+      type: string
+      index: not_analyzed
     authors:
       type: string
       index: not_analyzed
