@@ -1,6 +1,8 @@
 general:
   dynamic: strict
   properties:
+    createdAt:
+      type: date
     title:
       type: string
       index: analyzed
