@@ -13,6 +13,9 @@ general:
     authors:
       type: string
       index: not_analyzed
+    users:
+      type: string
+      index: not_analyzed
     published:
       type: boolean
       index: not_analyzed
