@@ -28,6 +28,9 @@ general:
         provider:
           type: string
           index: not_analyzed
+        updateTime:
+          type: date
+
     published:
       type: boolean
       index: not_analyzed
