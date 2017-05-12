@@ -4,7 +4,7 @@
   "description": "Coming soon!",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && npm run test-local",
+    "test": "npm run lint",
     "test-local": "istanbul cover _mocha",
     "lint": "eslint --max-warnings 0 lib test"
   },
