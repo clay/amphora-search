@@ -28,7 +28,7 @@
     "glob": "^7.1.1",
     "lodash": "^4.17.4",
     "lodash-ny-util": "^0.1.1",
-    "nymag-fs": "^1.0.0",
+    "nymag-fs": "^1.0.1",
     "promise-queue": "^2.2.3",
     "util": "^0.10.3",
     "winston": "^2.3.1"
