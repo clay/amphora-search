@@ -1,7 +1,6 @@
 'use strict';
 
-const _ = require('lodash'),
-  sinon = require('sinon');
+const sinon = require('sinon');
 
 function createRes() {
   return {
