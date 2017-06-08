@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nymag/amphora-search.git"
+    "url": "git+https://github.com/clay/amphora-search.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nymag/amphora-search/issues"
+    "url": "https://github.com/clay/amphora-search/issues"
   },
-  "homepage": "https://github.com/nymag/amphora-search#readme",
+  "homepage": "https://github.com/clay/amphora-search#readme",
   "dependencies": {
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
