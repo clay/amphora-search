@@ -1,7 +1,7 @@
 {
   "name": "amphora-search",
-  "version": "1.0.0-beta.6",
-  "description": "Coming soon!",
+  "version": "1.0.0",
+  "description": "Making it easier to use Elastic Search with Amphora",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && npm run mocha",
@@ -18,6 +18,12 @@
     "url": "https://github.com/clay/amphora-search/issues"
   },
   "homepage": "https://github.com/clay/amphora-search#readme",
+  "keywords": [
+    "amphora",
+    "clay",
+    "kiln",
+    "clay-kiln"
+  ],
   "dependencies": {
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
