@@ -1,0 +1,18 @@
+general:
+  dynamic: strict
+  properties:
+    name:
+      type: string
+      index: not_analyzed
+    username:
+      type: string
+      index: not_analyzed
+    image:
+      type: string
+      index: not_analyzed
+    provider:
+      type: string
+      index: not_analyzed
+    auth:
+      type: string
+      index: not_analyzed
