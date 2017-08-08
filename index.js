@@ -11,6 +11,7 @@ module.exports.routes = require('./lib/routes');
 module.exports.init = require('./lib/init');
 module.exports.save = require('./lib/save');
 module.exports.delete = require('./lib/delete');
+module.exports.publish = require('./lib/publish');
 module.exports.unpublish = require('./lib/unpublish');
 
 // Export helper functions for indices in a Clay instance
