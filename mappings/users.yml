@@ -1,0 +1,15 @@
+general:
+  dynamic: false
+  properties:
+    name:
+      type: string
+    imageUrl:
+      type: string
+      index: not_analyzed
+    auth:
+      type: string
+      index: not_analyzed
+    provider:
+      type: string
+    username:
+      type: string
