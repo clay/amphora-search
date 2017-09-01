@@ -1,18 +1,29 @@
+settings:
+  index:
+    analysis:
+      analyzer:
+        stdEnglish:
+          type: standard
+          stopwords: _english_
 general:
-  dynamic: strict
+  dynamic: true
   properties:
     createdAt:
       type: date
     title:
       type: string
       index: analyzed
-      analyzer: simple
+      analyzer: stdEnglish
     titleTruncated:
       type: string
       index: not_analyzed
     authors:
       type: string
-      index: not_analyzed
+      analyzer: standard
+      fields:
+        english:
+          type: string
+          analyzer: stdEnglish
     users:
       type: nested
       properties:
@@ -26,6 +37,9 @@ general:
           type: string
           index: not_analyzed
         provider:
+          type: string
+          index: not_analyzed
+        auth:
           type: string
           index: not_analyzed
         updateTime:
