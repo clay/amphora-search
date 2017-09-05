@@ -1,8 +1,20 @@
+settings:
+  index:
+    analysis:
+      analyzer:
+        stdEnglish:
+          type: standard
+          stopwords: _english_
 general:
   dynamic: false
   properties:
     name:
       type: string
+      analyzer: standard
+      fields:
+        english:
+          type: string
+          analyzer: stdEnglish
     imageUrl:
       type: string
       index: not_analyzed
