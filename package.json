@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/clay/amphora-search.git"
   },
-  "author": "",
+  "author": "New York Media",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/clay/amphora-search/issues"
@@ -47,5 +47,8 @@
     "istanbul": "^0.4.5",
     "mocha": "^3.5.0",
     "sinon": "^3.2.1"
+  },
+  "engines": {
+    "node": "^8.0.0"
   }
 }
