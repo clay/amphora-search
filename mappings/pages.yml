@@ -47,6 +47,9 @@ general:
     published:
       type: boolean
       index: not_analyzed
+    archived:
+      type: boolean
+      index: not_analyzed
     scheduled:
       type: boolean
       index: not_analyzed
