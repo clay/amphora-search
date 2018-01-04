@@ -7,6 +7,7 @@ const elastic = require('./lib/services/elastic'),
 module.exports.setup = require('./lib/setup');
 
 // Hooks
+module.exports.streams = require('./lib/streams');
 module.exports.routes = require('./lib/routes');
 module.exports.init = require('./lib/init');
 module.exports.save = require('./lib/save');
