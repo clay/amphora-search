@@ -1,13 +1,16 @@
 'use strict';
 
 const elastic = require('./lib/services/elastic'),
-  helpers = require('./lib/services/elastic-helpers');
+  helpers = require('./lib/services/elastic-helpers'),
+  streams = require('./lib/streams');
 
 // Setup the ES client and other startup tasks
 module.exports.setup = require('./lib/setup');
 
 // Hooks
-module.exports.streams = require('./lib/streams');
+module.exports.subscribe = streams.subscribe;
+module.exports.publishStream = streams.publishStream;
+module.exports.saveStream = streams.saveStream;
 module.exports.routes = require('./lib/routes');
 module.exports.init = require('./lib/init');
 module.exports.save = require('./lib/save');
