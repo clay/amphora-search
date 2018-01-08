@@ -1,0 +1,29 @@
+<loc>{{url}}</loc>
+<lastmod>{{lastmod}}</lastmod>
+<news:news>
+  {{#if publication}}
+  <news:publication>
+    {{#if publication.name}}
+    <news:name>{{publication.name}}</news:name>
+    {{/if}}
+    {{#if publication.language}}
+    <news:language>{{publication.language}}</news:language>
+    {{/if}}
+  </news:publication>
+  {{/if}}
+  {{#if publication_date}}
+  <news:publication_date>{{publication_date}}</news:publication_date>
+  {{/if}}
+  {{#if title}}
+  <news:title>{{title}}</news:title>
+  {{/if}}
+  {{#if language}}
+  <news:language>{{language}}</news:language>
+  {{/if}}
+  {{#if keywords}}
+  <news:keywords>{{keywords}}</news:keywords>
+  {{/if}}
+  {{#if stock_tickers}}
+  <news:stock_tickers>{{stock_tickers}}</news:stock_tickers>
+  {{/if}}
+</news:news>
