@@ -55,6 +55,8 @@ general:
       index: not_analyzed
     scheduledTime:
       type: date
+    firstPublishTime:
+      type: date
     publishTime:
       type: date
     updateTime:
