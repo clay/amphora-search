@@ -44,6 +44,32 @@ general:
           index: not_analyzed
         updateTime:
           type: date
+    history:
+      type: nested
+      properties:
+        action:
+          type: string
+          index: not_analyzed
+        timestamp:
+          type: date
+        users:
+          type: nested
+          properties:
+            username:
+              type: string
+              index: not_analyzed
+            imageUrl:
+              type: string
+              index: not_analyzed
+            name:
+              type: string
+              index: not_analyzed
+            provider:
+              type: string
+              index: not_analyzed
+            auth:
+              type: string
+              index: not_analyzed
     published:
       type: boolean
       index: not_analyzed

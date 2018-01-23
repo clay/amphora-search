@@ -25,6 +25,5 @@ module.exports.helpers = helpers;
 module.exports.filters = require('./lib/services/filters');
 
 // Page List & Other Helpers
-module.exports.updatePageProperty = require('./lib/page-list').updatePageEntry;
 module.exports.stripPrefix = helpers.stripPrefix;
 module.exports.indexWithPrefix = helpers.indexWithPrefix;
