@@ -11,7 +11,6 @@ function createRes() {
     type: sinon.spy(),
     redirect: sinon.spy(),
     _write: (chunk, enc, next) => {
-      console.log(chunk);
       next();
     }
   });
