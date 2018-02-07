@@ -1,46 +1,42 @@
-<loc>{{url}}</loc>
-<lastmod>{{lastmod}}</lastmod>
-<news:news>
-  
-  {{#if publication}}
-  <news:publication>
-    {{#if publication.name}}
-    <news:name>{{publication.name}}</news:name>
+<url>
+  <loc>{{url}}</loc>
+  <lastmod>{{lastmod}}</lastmod>
+  <news:news>
+    
+    {{#if publication}}
+    <news:publication>
+      {{#if publication.name}}
+      <news:name>{{publication.name}}</news:name>
+      {{/if}}
+      {{#if publication.language}}
+      <news:language>{{publication.language}}</news:language>
+      {{/if}}
+    </news:publication>
     {{/if}}
-    {{#if publication.language}}
-    <news:language>{{publication.language}}</news:language>
+    
+    {{#if publication_date}}
+    <news:publication_date>{{publication_date}}</news:publication_date>
     {{/if}}
-  </news:publication>
-  {{/if}}
-  
-  {{#if publication_date}}
-  <news:publication_date>{{publication_date}}</news:publication_date>
-  {{/if}}
-  
-  {{#if title}}
-  <news:title>{{title}}</news:title>
-  {{/if}}
-  
-  {{#if language}}
-  <news:language>{{language}}</news:language>
-  {{/if}}
-  
-  {{#if keywords.length}}
-  <news:keywords>
-  {{#each keywords}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
-  </news:keywords>
-  {{/if}}
-  
-  {{#if stock_tickers.length}}
-  <news:stock_tickers>
-  {{#each stock_tickers}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
-  </news:stock_tickers>
-  {{/if}}
+    
+    {{#if title}}
+    <news:title>{{title}}</news:title>
+    {{/if}}
+    
+    {{#if language}}
+    <news:language>{{language}}</news:language>
+    {{/if}}
+    
+    {{#if keywords.length}}
+    <news:keywords>{{#each keywords}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</news:keywords>
+    {{/if}}
+    
+    {{#if stock_tickers.length}}
+    <news:stock_tickers>{{#each stock_tickers}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</news:stock_tickers>
+    {{/if}}
 
-  {{#if genres.length}}
-  <news:genres>
-  {{#each genres}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
-  </news:genres>
-  {{/if}}
+    {{#if genres.length}}
+    <news:genres>{{#each genres}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</news:genres>
+    {{/if}}
 
-</news:news>
+  </news:news>
+</url>
