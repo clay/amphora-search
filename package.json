@@ -1,6 +1,6 @@
 {
   "name": "amphora-search",
-  "version": "4.5.2",
+  "version": "4.6.0",
   "description": "Making it easier to use Elastic Search with Amphora",
   "main": "index.js",
   "scripts": {
