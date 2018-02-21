@@ -16,6 +16,9 @@ general:
     port:
       type: string
       index: not_analyzed
+    protocol:
+      type: string
+      index: not_analyzed
     assetDir:
       type: string
       index: not_analyzed
