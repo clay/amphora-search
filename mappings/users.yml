@@ -9,19 +9,17 @@ general:
   dynamic: false
   properties:
     name:
-      type: string
+      type: text
       analyzer: standard
       fields:
         english:
-          type: string
+          type: text
           analyzer: stdEnglish
     imageUrl:
-      type: string
-      index: not_analyzed
+      type: keyword
     auth:
-      type: string
-      index: not_analyzed
+      type: keyword
     provider:
-      type: string
+      type: keyword
     username:
-      type: string
+      type: keyword
