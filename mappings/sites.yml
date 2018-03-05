@@ -1,4 +1,4 @@
-general:
+_doc:
   dynamic: strict
   properties:
     name:

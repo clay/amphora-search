@@ -5,7 +5,7 @@ settings:
         stdEnglish:
           type: standard
           stopwords: _english_
-general:
+_doc:
   dynamic: strict
   properties:
     createdAt:
