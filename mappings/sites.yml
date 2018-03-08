@@ -1,33 +1,23 @@
-general:
+_doc:
   dynamic: strict
   properties:
     name:
-      type: string
-      index: not_analyzed
+      type: keyword
     slug:
-      type: string
-      index: not_analyzed
+      type: keyword
     host:
-      type: string
-      index: not_analyzed
+      type: keyword
     path:
-      type: string
-      index: not_analyzed
+      type: keyword
     port:
-      type: string
-      index: not_analyzed
+      type: keyword
     protocol:
-      type: string
-      index: not_analyzed
+      type: keyword
     assetDir:
-      type: string
-      index: not_analyzed
+      type: keyword
     assetPath:
-      type: string
-      index: not_analyzed
+      type: keyword
     mediaPath:
-      type: string
-      index: not_analyzed
+      type: keyword
     siteIcon:
-      type: string
-      index: not_analyzed
+      type: keyword

@@ -5,80 +5,64 @@ settings:
         stdEnglish:
           type: standard
           stopwords: _english_
-general:
+_doc:
   dynamic: strict
   properties:
     createdAt:
       type: date
     title:
-      type: string
-      index: analyzed
+      type: text
       analyzer: stdEnglish
     titleTruncated:
-      type: string
-      index: not_analyzed
+      type: keyword
     authors:
-      type: string
+      type: text
       analyzer: standard
       fields:
         english:
-          type: string
+          type: text
           analyzer: stdEnglish
     users:
       type: nested
       properties:
         username:
-          type: string
-          index: not_analyzed
+          type: keyword
         imageUrl:
-          type: string
-          index: not_analyzed
+          type: keyword
         name:
-          type: string
-          index: not_analyzed
+          type: keyword
         provider:
-          type: string
-          index: not_analyzed
+          type: keyword
         auth:
-          type: string
-          index: not_analyzed
+          type: keyword
         updateTime:
           type: date
     history:
       type: nested
       properties:
         action:
-          type: string
-          index: not_analyzed
+          type: keyword
         timestamp:
           type: date
         users:
           type: nested
           properties:
             username:
-              type: string
-              index: not_analyzed
+              type: keyword
             imageUrl:
-              type: string
-              index: not_analyzed
+              type: keyword
             name:
-              type: string
-              index: not_analyzed
+              type: keyword
             provider:
-              type: string
-              index: not_analyzed
+              type: keyword
             auth:
-              type: string
-              index: not_analyzed
+              type: keyword
     published:
       type: boolean
-      index: not_analyzed
     archived:
       type: boolean
-      index: not_analyzed
     scheduled:
       type: boolean
-      index: not_analyzed
     scheduledTime:
       type: date
     firstPublishTime:
@@ -88,11 +72,8 @@ general:
     updateTime:
       type: date
     url:
-      type: string
-      index: not_analyzed
+      type: keyword
     uri:
-      type: string
-      index: not_analyzed
+      type: keyword
     siteSlug:
-      type: string
-      index: not_analyzed
+      type: keyword
