@@ -1,11 +1,11 @@
 <url>
-  {{#if url}}<loc>{{url}}</loc>{{/if}}
+  {{#if loc}}<loc>{{loc}}</loc>{{/if}}
   {{#if lastmod}}<lastmod>{{lastmod}}</lastmod>{{/if}}
   {{#if changefreq}}<changefreq>{{changefreq}}</changefreq>{{/if}}
   {{#if priority}}<priority>{{priority}}</priority>{{/if}}
   {{#each images}}
   <image:image>
-    {{#if location}}<image:loc>{{location}}</image:loc>{{/if}}
+    {{#if loc}}<image:loc>{{loc}}</image:loc>{{/if}}
     {{#if caption}}<image:caption>{{caption}}</image:caption>{{/if}}
   </image:image>
   {{/each}}
