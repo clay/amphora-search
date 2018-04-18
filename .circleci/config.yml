@@ -1,52 +1,11 @@
 version: 2
 jobs:
-  checkout_and_install:
+  build:
     docker:
       - image: node:8.9.0
     working_directory: ~/repo
     steps:
       - checkout
       - run: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: dependencies-{{ .Environment.CIRCLE_SHA1 }}
-  test:
-    docker:
-      - image: node:8.9.0
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - dependencies-{{ .Environment.CIRCLE_SHA1 }}
       - run: npm test
-      - save_cache:
-          paths:
-            - coverage
-          key: coverage-{{ .Environment.CIRCLE_SHA1 }}
-  coveralls:
-    docker:
-      - image: node:8.9.0
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - dependencies-{{ .Environment.CIRCLE_SHA1 }}
-      - restore_cache:
-          keys:
-            - coverage-{{ .Environment.CIRCLE_SHA1 }}
       - run: cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-
-workflows:
-  version: 2
-  build:
-    jobs:
-      - checkout_and_install
-      - test:
-          requires:
-            - checkout_and_install
-      - coveralls:
-          requires:
-            - test
