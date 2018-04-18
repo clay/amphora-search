@@ -48,6 +48,3 @@ workflows:
       - coveralls:
           requires:
             - test
-          filters:
-            branches:
-              only: master
