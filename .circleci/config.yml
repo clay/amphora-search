@@ -2,17 +2,10 @@ version: 2
 jobs:
   checkout_and_install:
     docker:
-      # specify the version you desire here
       - image: node:8.9.0
     working_directory: ~/repo
     steps:
       - checkout
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - dependencies-{{ .Environment.CIRCLE_SHA1 }}
-          # fallback to using the latest cache if no exact match is found
-          - dependencies-
       - run: npm install
       - save_cache:
           paths:
@@ -20,7 +13,6 @@ jobs:
           key: dependencies-{{ .Environment.CIRCLE_SHA1 }}
   test:
     docker:
-      # specify the version you desire here
       - image: node:8.9.0
     working_directory: ~/repo
     steps:
@@ -35,7 +27,6 @@ jobs:
           key: coverage-{{ .Environment.CIRCLE_SHA1 }}
   coveralls:
     docker:
-      # specify the version you desire here
       - image: node:8.9.0
     working_directory: ~/repo
     steps:
@@ -48,7 +39,7 @@ jobs:
 
 workflows:
   version: 2
-  checkout_and_test:
+  build:
     jobs:
       - checkout_and_install
       - test:
@@ -60,69 +51,3 @@ workflows:
           filters:
             branches:
               only: master
-
-# workflows:
-#   version: 2
-#   dev_stage_pre-prod:
-#     jobs:
-#       - test_dev:
-#           filters:
-#             branches:
-#               only:
-#                 - dev
-#                 - /user-.*/
-#       - test_stage:
-#           filters:
-#             branches:
-#               only: stage
-#       - test_pre-prod:
-#           filters:
-#             branches:
-#               only: /pre-prod(?:-.+)?$/
-
-  # build:
-  #   docker:
-  #     # specify the version you desire here
-  #     - image: node:8.9.0
-  #   working_directory: ~/repo
-  #   branches:
-  #     only:
-  #       - master
-  #   steps:
-  #     - checkout
-  #     # Download and cache dependencies
-  #     - restore_cache:
-  #         keys:
-  #         - dependencies-{{ .Environment.CIRCLE_SHA1 }}
-  #         # fallback to using the latest cache if no exact match is found
-  #         - dependencies-
-  #     - run: npm install
-  #     - save_cache:
-  #         paths:
-  #           - node_modules
-  #         key: dependencies-{{ .Environment.CIRCLE_SHA1 }}
-  #     # run tests
-  #     - run: npm test
-  #     # send to coveralls
-  #     - run: cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-  #
-  # pr:
-  #   docker:
-  #     # specify the version you desire here
-  #     - image: node:8.9.0
-  #   working_directory: ~/repo
-  #   steps:
-  #     - checkout
-  #     # Download and cache dependencies
-  #     - restore_cache:
-  #         keys:
-  #         - dependencies-{{ .Environment.CIRCLE_SHA1 }}
-  #         # fallback to using the latest cache if no exact match is found
-  #         - dependencies-
-  #     - run: npm install
-  #     - save_cache:
-  #         paths:
-  #           - node_modules
-  #         key: dependencies-{{ .Environment.CIRCLE_SHA1 }}
-  #     # run tests
-  #     - run: npm test
