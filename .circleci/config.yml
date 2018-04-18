@@ -27,13 +27,13 @@ jobs:
       - run: npm test
 
 workflows:
-version: 2
-build-and-deploy:
-  jobs:
-    - checkout_and_install
-    - test:
-        requires:
-          - checkout_and_install
+  version: 2
+  checkout_and_test:
+    jobs:
+      - checkout_and_install
+      - test:
+          requires:
+            - checkout_and_install
 
 # workflows:
 #   version: 2
