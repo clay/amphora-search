@@ -23,6 +23,8 @@ module.exports.publishPage = require('./lib/page-list/publish');
 module.exports.unpublishPage = require('./lib/page-list/unpublish');
 module.exports.schedulePage = require('./lib/page-list/schedule');
 module.exports.unschedulePage = require('./lib/page-list/unschedule');
+// Layout List Hooks
+// module.exports.publishLayout = require('./lib/layout-list/publish');
 
 // Export helper functions for indices in a Clay instance
 module.exports.elastic = elastic;
