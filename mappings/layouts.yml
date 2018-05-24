@@ -20,6 +20,8 @@ _doc:
           type: keyword
         timestamp:
           type: date
+        scheduleTime:
+          type: date
         users:
           type: nested
           properties:
