@@ -6,7 +6,7 @@ settings:
           type: standard
           stopwords: _english_
 _doc:
-  dynamic: strict
+  dynamic: true
   properties:
     createdAt:
       type: date

@@ -39,6 +39,7 @@
     "lodash-ny-util": "^0.1.1",
     "nymag-fs": "^1.0.1",
     "promise-queue": "^2.2.3",
+    "redis": "^2.8.0",
     "util": "^0.10.3",
     "xml-js": "^1.6.2"
   },
