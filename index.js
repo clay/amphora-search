@@ -11,18 +11,14 @@ module.exports.setup = require('./lib/setup');
 module.exports.subscribe = streams.subscribe;
 module.exports.routes = require('./lib/routes');
 module.exports.init = require('./lib/init');
-// module.exports.save = require('./lib/save');
-// module.exports.delete = require('./lib/delete');
 
-// module.exports.unpublish = require('./lib/unpublish');
-// Page List Hooks
-// module.exports.createPage = require('./lib/page-list/create');
-
-// module.exports.unpublishPage = require('./lib/page-list/unpublish');
-// module.exports.schedulePage = require('./lib/page-list/schedule');
-// module.exports.unschedulePage = require('./lib/page-list/unschedule');
-// // Layout List Hooks
-// module.exports.publishLayout = require('./lib/layout-list/publish');
+// Need to require these somewhere to register listeners
+require('./lib/layout-list/publish');
+require('./lib/page-list/create');
+require('./lib/page-list/publish');
+require('./lib/page-list/unpublish');
+require('./lib/page-list/schedule');
+require('./lib/page-list/unschedule');
 
 // Export helper functions for indices in a Clay instance
 module.exports.elastic = elastic;
