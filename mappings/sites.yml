@@ -1,5 +1,4 @@
 _doc:
-  dynamic: strict
   properties:
     name:
       type: keyword
