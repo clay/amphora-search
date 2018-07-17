@@ -20,9 +20,3 @@ module.exports.filters = require('./lib/services/filters');
 // Page List & Other Helpers
 module.exports.stripPrefix = helpers.stripPrefix;
 module.exports.indexWithPrefix = helpers.indexWithPrefix;
-
-// Need to require these somewhere to register listeners
-require('./lib/layout-list/publish');
-
-// require('./lib/page-list/schedule');
-// require('./lib/page-list/unschedule');
