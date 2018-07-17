@@ -1,19 +1,21 @@
 settings:
   index:
     analysis:
-      analyzer:
-        stdEnglish:
-          type: standard
-          stopwords: _english_
+      normalizer:
+        lowercase:
+          type: custom
+          filter:
+            - lowercase
 _doc:
   properties:
     name:
       type: text
       analyzer: standard
+      fielddata: true
       fields:
         english:
-          type: text
-          analyzer: stdEnglish
+          type: keyword
+          normalizer: lowercase
     imageUrl:
       type: keyword
     auth:
