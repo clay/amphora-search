@@ -6,8 +6,7 @@ const elastic = require('./lib/services/elastic'),
 
 // Initialize the module
 module.exports = require('./lib/init');
-// Setup the ES client and other startup tasks
-module.exports.setup = require('./lib/setup');
+
 // Allow subscription to Streams
 module.exports.subscribe = streams.subscribe;
 
