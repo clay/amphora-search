@@ -4,8 +4,8 @@
   "description": "Making it easier to use Elastic Search with Amphora",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && npm run mocha",
-    "mocha": "istanbul cover _mocha",
+    "test": "npm run lint && npm run jest",
+    "jest": "jest",
     "lint": "eslint --max-warnings 0 lib test"
   },
   "repository": {
@@ -48,6 +48,7 @@
     "coveralls": "^2.13.1",
     "eslint": "^4.6.1",
     "istanbul": "^0.4.5",
+    "jest": "^23.4.1",
     "mocha": "^3.5.0",
     "sinon": "^3.2.1",
     "supertest": "^3.0.0"
