@@ -10,6 +10,7 @@ module.exports = {
     '!*.config.js',
     '!index.js',
     '!_book/**',
+    '!test/',
     '**/*.js'
   ],
   coverageDirectory: 'coverage'
