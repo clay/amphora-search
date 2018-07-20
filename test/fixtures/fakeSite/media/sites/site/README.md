@@ -1,0 +1,1 @@
+Mocks a file structure for a site's public directory
