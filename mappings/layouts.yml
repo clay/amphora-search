@@ -7,7 +7,7 @@ settings:
           stopwords: _english_
 _doc:
   properties:
-    createTime:
+    createdAt:
       type: date
     title:
       type: text

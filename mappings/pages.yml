@@ -76,3 +76,5 @@ _doc:
       type: keyword
     siteSlug:
       type: keyword
+    urlHistory:
+      type: text
