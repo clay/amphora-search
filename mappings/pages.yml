@@ -6,7 +6,6 @@ settings:
           type: standard
           stopwords: _english_
 _doc:
-  dynamic: strict
   properties:
     createdAt:
       type: date
@@ -77,3 +76,5 @@ _doc:
       type: keyword
     siteSlug:
       type: keyword
+    urlHistory:
+      type: text

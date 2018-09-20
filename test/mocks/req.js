@@ -1,11 +1,10 @@
 'use strict';
 
-const _ = require('lodash'),
-  sinon = require('sinon');
+const _ = require('lodash');
 
 function createReq() {
   return {
-    isAuthenticated: sinon.stub()
+    isAuthenticated: jest.fn()
   };
 }
 

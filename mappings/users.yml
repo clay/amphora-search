@@ -7,7 +7,6 @@ settings:
           filter:
             - lowercase
 _doc:
-  dynamic: false
   properties:
     name:
       type: text

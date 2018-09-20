@@ -1,11 +1,11 @@
 {
   "name": "amphora-search",
-  "version": "6.2.3",
+  "version": "7.0.0-2",
   "description": "Making it easier to use Elastic Search with Amphora",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && npm run mocha",
-    "mocha": "istanbul cover _mocha",
+    "test": "npm run lint && npm run jest",
+    "jest": "jest",
     "lint": "eslint --max-warnings 0 lib test"
   },
   "repository": {
@@ -25,11 +25,12 @@
     "clay-kiln"
   ],
   "dependencies": {
+    "amphora-fs": "^1.0.1",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
     "chalk": "^1.1.3",
     "clay-log": "^1.1.0",
-    "clayutils": "^2.0.3",
+    "clayutils": "^2.5.0",
     "elasticsearch": "^13.0.1",
     "elasticsearch-scroll-stream": "^1.1.3",
     "express": "^4.16.3",
@@ -37,19 +38,16 @@
     "highland": "^2.11.1",
     "lodash": "^4.17.4",
     "lodash-ny-util": "^0.1.1",
-    "nymag-fs": "^1.0.1",
     "promise-queue": "^2.2.3",
+    "redis": "^2.8.0",
     "util": "^0.10.3",
     "xml-js": "^1.6.2"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
     "coveralls": "^3.0.2",
     "eslint": "^4.6.1",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.5.0",
-    "sinon": "^3.2.1",
-    "supertest": "^3.1.0"
+    "jest": "^23.4.1",
+    "supertest": "^3.0.0"
   },
   "engines": {
     "node": "^8.0.0"

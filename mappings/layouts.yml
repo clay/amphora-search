@@ -6,9 +6,8 @@ settings:
           type: standard
           stopwords: _english_
 _doc:
-  dynamic: strict
   properties:
-    createTime:
+    createdAt:
       type: date
     title:
       type: text

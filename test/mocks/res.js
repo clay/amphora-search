@@ -1,15 +1,14 @@
 'use strict';
 
-const sinon = require('sinon'),
-  stream = require('stream');
+const stream = require('stream');
 
 function createRes() {
   const writable = stream.Writable();
 
   Object.assign(writable, {
-    send: sinon.spy(),
-    type: sinon.spy(),
-    redirect: sinon.spy(),
+    send: jest.fn(),
+    type: jest.fn(),
+    redirect: jest.fn(),
     _write: (chunk, enc, next) => {
       next();
     }
