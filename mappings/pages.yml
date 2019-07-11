@@ -22,7 +22,16 @@ _doc:
           type: text
           analyzer: stdEnglish
     users:
-      type: text
+      type: nested
+      properties:
+        id:
+          type: text
+        username:
+          type: keyword
+        provider:
+          type: keyword
+        updateTime:
+          type: date
     history:
       type: nested
       properties:
@@ -31,7 +40,14 @@ _doc:
         timestamp:
           type: date
         users:
-          type: text
+          type: nested
+          properties:
+            id:
+              type: text
+            username:
+              type: keyword
+            provider:
+              type: keyword
     published:
       type: boolean
     archived:
