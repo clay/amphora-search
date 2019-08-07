@@ -1,0 +1,1 @@
+Mocks a file structure for a subsite's public directory
