@@ -4,6 +4,8 @@ _doc:
       type: keyword
     slug:
       type: keyword
+    subsiteSlug:
+      type: keyword
     host:
       type: keyword
     path:
