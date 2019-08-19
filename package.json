@@ -30,7 +30,7 @@
     "body-parser": "^1.17.1",
     "chalk": "^1.1.3",
     "clay-log": "^1.1.0",
-    "clayutils": "^2.5.0",
+    "clayutils": "^2.6.2",
     "elasticsearch": "^13.0.1",
     "elasticsearch-scroll-stream": "^1.1.3",
     "express": "^4.16.3",

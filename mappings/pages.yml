@@ -76,5 +76,7 @@ _doc:
       type: keyword
     siteSlug:
       type: keyword
+    subsiteSlug:
+      type: keyword
     urlHistory:
       type: text
