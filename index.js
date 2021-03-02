@@ -15,6 +15,7 @@ module.exports.elastic = elastic;
 module.exports.getInstance = elastic.getInstance;
 module.exports.helpers = helpers;
 module.exports.filters = require('./lib/services/filters');
+module.exports.streams = streams;
 
 // Page List & Other Helpers
 module.exports.stripPrefix = helpers.stripPrefix;
