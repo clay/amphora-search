@@ -2,6 +2,7 @@
 
 const elastic = require('./lib/services/elastic'),
   helpers = require('./lib/services/elastic-helpers'),
+  reindex = require('./lib/services/reindex'),
   streams = require('./lib/streams');
 
 // Initialize the module
@@ -15,6 +16,7 @@ module.exports.elastic = elastic;
 module.exports.getInstance = elastic.getInstance;
 module.exports.helpers = helpers;
 module.exports.filters = require('./lib/services/filters');
+module.exports.reindex = reindex;
 module.exports.streams = streams;
 
 // Page List & Other Helpers
