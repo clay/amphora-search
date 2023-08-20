@@ -24,15 +24,11 @@ _doc:
     users:
       type: nested
       properties:
+        id:
+          type: text
         username:
           type: keyword
-        imageUrl:
-          type: keyword
-        name:
-          type: keyword
         provider:
-          type: keyword
-        auth:
           type: keyword
         updateTime:
           type: date
@@ -46,15 +42,11 @@ _doc:
         users:
           type: nested
           properties:
+            id:
+              type: text
             username:
               type: keyword
-            imageUrl:
-              type: keyword
-            name:
-              type: keyword
             provider:
-              type: keyword
-            auth:
               type: keyword
     published:
       type: boolean
