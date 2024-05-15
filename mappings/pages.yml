@@ -12,6 +12,9 @@ _doc:
     title:
       type: text
       analyzer: stdEnglish
+      fields:
+        raw:
+          type: keyword
     titleTruncated:
       type: keyword
     authors:
@@ -21,6 +24,8 @@ _doc:
         english:
           type: text
           analyzer: stdEnglish
+        raw:
+          type: keyword
     users:
       type: nested
       properties:
